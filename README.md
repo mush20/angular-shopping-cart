@@ -7,8 +7,8 @@ Develop a simple Shopping cart application.
 ![Visual mockup of Shopping cart app](layout.jpg)
 
 ## Features
-- [] Add/Update/Delete of item (CRUD)
-- [] An up to date list of item in the shopping cart
+- [ ] Add/Update/Delete of item (CRUD)
+- [ ] An up to date list of item in the shopping cart
 
 ## Constraints
 - Feel free to pull in Angular Materials
@@ -29,6 +29,12 @@ Develop a simple Shopping cart application.
 # Demo via stackblitz
 https://stackblitz.com/github/ampdigital/interview-angular
 
+
+
+
+
+
+** Below are auto-generated README content **
 # ShoppingCartApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
