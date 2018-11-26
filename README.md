@@ -1,3 +1,34 @@
+# AMP Angular interview seed repo
+A seed Angular repo, to give candidate a common starting point to demonstrate their skills.
+
+# Task
+Develop a simple Shopping cart application.
+
+![Visual mockup of Shopping cart app](layout.jpg)
+
+## Features
+- [] Add/Update/Delete of item (CRUD)
+- [] An up to date list of item in the shopping cart
+
+## Constraints
+- Feel free to pull in Angular Materials
+- Free to use CSS libraries (Bootstrap, Fontawesome, Ionic)
+- Free to use 3rd party libraries but be prepare to justify your choice
+- App needs to compile and run, ideally via stackblitz
+
+## Area of demonstration
+- Modularity
+- Usage of service(s)
+- Unit test
+- CSS clarity
+
+### Bonus points
+- Sorting/Filtering by category, name, price, etc
+- Performance focus
+
+# Demo via stackblitz
+https://stackblitz.com/github/ampdigital/interview-angular
+
 # ShoppingCartApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
