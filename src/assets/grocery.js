@@ -1,4 +1,4 @@
-[
+export const inventory = [
     {
         "name": "Bread",
         "price": 3.60,
@@ -29,4 +29,4 @@
         "price": 5,
         "category": ["Dairy","Snack"]
     }
-]
+];
