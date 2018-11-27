@@ -7,8 +7,8 @@ Develop a simple Shopping cart application.
 ![Visual mockup of Shopping cart app](layout.jpg)
 
 ## Features
-- [ ] Add/Update/Delete of item (CRUD)
-- [ ] An up to date list of item in the shopping cart
+- [x] Add/Update/Delete of item (CRUD)
+- [x] An up to date list of item in the shopping cart
 
 ## Constraints
 - Feel free to pull in Angular Materials
