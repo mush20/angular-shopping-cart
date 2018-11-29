@@ -3,6 +3,7 @@ A seed Angular repo, to give candidate a common starting point to demonstrate th
 
 # Task
 Develop a simple Shopping cart application.
+- Please spend no more than two hours on this as will shown by commit timestamps, comment on what was done and what wasn't
 
 ![Visual mockup of Shopping cart app](layout.jpg)
 
