@@ -1,0 +1,31 @@
+<div>
+    <h3>Shopping Cart</h3>
+
+    <div class="cart__title">
+        <div class="cart__col cart__col--name">
+            Name
+        </div>
+        <div class="cart__col cart__col--qty">
+            Qty.
+        </div>
+        <div class="cart__col cart__col--price">
+            Price
+        </div>
+        <div class="cart__col cart__col--remove">
+        </div>
+    </div>
+    <div *ngFor="let item of (cartData$ | async)" class="cart__row">
+        <div class="cart__col cart__col--name">
+            <a href="#" (click)="editItem(item)">{{item.name}}</a>
+        </div>
+        <div class="cart__col cart__col--qty">
+            {{item.qty}}
+        </div>
+        <div class="cart__col cart__col--price">
+            ${{item.price | number}}
+        </div>
+        <div class="cart__col cart__col--remove" (click)="removeItem(item)">
+            X
+        </div>
+    </div>
+</div>

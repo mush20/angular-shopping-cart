@@ -1,9 +1,11 @@
-<h1 class="text-center">Welcome to AMP shopping cart</h1>
-<div>
-  <div class="row">
-    <div class="col-sm-4">
+<div class="app-container">
+  <h1 class="main-title text-center">Welcome to AMP shopping cart</h1>
+  <div class="row cart-wrapper">
+    <div class="col-md-4 cart-add" >
+      <app-cart-add [productItems]="productItems" [selectedItem]="selectedItem"></app-cart-add>
     </div>
-    <div class="col-sm-8">
+    <div class="col-md-8 cart-listing">
+      <app-cart-listing (editData)="editData($event)"></app-cart-listing>
     </div>
   </div>
 </div>
