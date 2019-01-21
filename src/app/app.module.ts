@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UtilsModule } from '@utils/utils.module';
 import { NgxsModule } from '@ngxs/store';
 import { environment } from '../environments/environment';
+import { ProductDetailModule } from '@app/components/product-detail/product-detail.module';
+import { ShoppingCartModule } from '@app/components/shopping-cart/shopping-cart.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     HttpClientModule,
     UtilsModule,
-    NgxsModule.forRoot([], {developmentMode: !environment.production})
+    NgxsModule.forRoot([], {developmentMode: !environment.production}),
+    ProductDetailModule,
+    ShoppingCartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
