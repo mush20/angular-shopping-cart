@@ -1,0 +1,31 @@
+.cart__title,
+.cart__row {
+    &:after {
+        clear: both;
+        content: ' ';
+        display: block;
+    }
+}
+.cart__title{
+    border-bottom: 2px solid #000;
+}
+.cart__row{
+    border-bottom: 1px dotted #000;
+}
+.cart__col {
+    float: left;
+    padding: 10px;
+    &.cart__col--name {
+        width: 40%;
+    }
+    &.cart__col--qty {
+        width: 20%;
+    }
+    &.cart__col--price {
+        width: 30%;
+    }
+    &.cart__col--remove {
+        cursor: pointer;
+        width: 10%;
+    }
+}
