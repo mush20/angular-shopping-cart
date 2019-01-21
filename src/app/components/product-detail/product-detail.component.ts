@@ -26,7 +26,7 @@ export class ProductDetailComponent implements OnInit {
   @Output() select: EventEmitter<string> = new EventEmitter();
   @Output() add: EventEmitter<ProductModel> = new EventEmitter();
 
-  @HostBinding('class.products-view') cssClass = true;
+  @HostBinding('class.products-detail') cssClass = true;
 
   constructor() {
   }

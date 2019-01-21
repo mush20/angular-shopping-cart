@@ -3,7 +3,7 @@
   <section>
     <!--Name Input-->
     <form [formGroup]="form" novalidate role="form">
-      <section>
+      <section class="product-detail--forms">
         <mat-form-field>
           <mat-select placeholder="Name"
                       formControlName="name"
@@ -34,7 +34,7 @@
     </form>
   </section>
 
-  <section class="shopping-card--total">
+  <section class="product-detail--total">
     <button mat-raised-button
             color="primary"
             [disabled]="form.invalid"

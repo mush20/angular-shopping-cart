@@ -1,5 +1,41 @@
 @import "variables";
 
 .content {
-  margin-top: $default-margin-size;
+
+  &--wrapper {
+    margin: $default-margin-size;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  &--shopping-cart {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: $default-margin-size;
+  }
+
+  &--product-detail {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width:$default-screen-breakpoint) {
+
+    &--wrapper {
+      flex-direction: column;
+    }
+
+    &--shopping-cart {
+      order: 0;
+      margin-bottom: $default-margin-size;
+      margin-left: 0;
+    }
+
+    &--product-detail {
+      order: 1;
+    }
+  }
 }

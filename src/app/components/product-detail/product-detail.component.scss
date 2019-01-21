@@ -1,0 +1,22 @@
+@import "flex";
+@import "variables";
+
+.product-detail {
+
+  flex: 0 1 auto;
+
+  .mat-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--forms {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--total {
+    @include shrink-align-end();
+    margin-top: $default-margin-size;
+  }
+}

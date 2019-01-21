@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card class="flex-fill-columns">
   <h3>Shopping Cart</h3>
   <section class="shopping-cart--wrapper">
     <section fxFlex
@@ -33,10 +33,10 @@
         <!--Remove Column-->
         <ng-container matColumnDef="remove">
           <mat-header-cell
-            *matHeaderCellDef fxFlex="40px"></mat-header-cell>
+            *matHeaderCellDef class="table-col--remove"></mat-header-cell>
           <mat-cell mat-cell
                     *matCellDef="let item"
-                    fxFlex="40px">
+                    class="table-col--remove">
             <mat-icon (click)="removeProduct(item.name)">close</mat-icon>
           </mat-cell>
         </ng-container>

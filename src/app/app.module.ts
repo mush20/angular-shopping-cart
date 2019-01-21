@@ -9,6 +9,7 @@ import { NgxsModule } from '@ngxs/store';
 import { environment } from '../environments/environment';
 import { ProductDetailModule } from '@app/components/product-detail/product-detail.module';
 import { ShoppingCartModule } from '@app/components/shopping-cart/shopping-cart.module';
+import { ShoppingCartState } from '@app/states/shopping-cart.state';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { ShoppingCartModule } from '@app/components/shopping-cart/shopping-cart.
     BrowserAnimationsModule,
     HttpClientModule,
     UtilsModule,
-    NgxsModule.forRoot([], {developmentMode: !environment.production}),
+    NgxsModule.forRoot([ShoppingCartState], {developmentMode: !environment.production}),
     ProductDetailModule,
     ShoppingCartModule
   ],

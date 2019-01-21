@@ -1,14 +1,18 @@
-<section fxFlexFill
-         fxLayout="column">
+<section class="flex-fill-columns">
   <mat-toolbar color="primary">
     <span>AMP Interview</span>
   </mat-toolbar>
-  <main class="content">
-    <section content--shopping-cart>
-      <app-shopping-cart></app-shopping-cart>
+  <main class="content--wrapper">
+    <section class="content--product-detail">
+      <app-product-detail [products]="products$ | async"
+                          [selected]="selected$ | async"
+                          (select)="selectProduct($event)"
+                          (add)="addProduct($event)"></app-product-detail>
     </section>
-    <section content--product-detail>
-      <app-product-detail></app-product-detail>
+    <section class="content--shopping-cart">
+      <app-shopping-cart [items]="items$ | async"
+                         [total]="total$ | async"
+                         (remove)="removeProduct($event)"></app-shopping-cart>
     </section>
   </main>
 </section>
