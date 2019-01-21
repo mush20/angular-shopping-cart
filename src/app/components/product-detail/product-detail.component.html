@@ -1,3 +1,44 @@
-<p>
-  product-detail works!
-</p>
+<mat-card>
+  <h3>Add Product</h3>
+  <section>
+    <!--Name Input-->
+    <form [formGroup]="form" novalidate role="form">
+      <section>
+        <mat-form-field>
+          <mat-select placeholder="Name"
+                      formControlName="name"
+
+                      (valueChange)="selectProduct($event)">
+            <mat-option *ngFor="let product of products"
+                        [value]="product.name">{{product.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!--Qty Input-->
+        <mat-form-field>
+          <input matInput
+                 type="number"
+                 min="1"
+                 placeholder="Quantity"
+                 formControlName="qty">
+        </mat-form-field>
+
+        <!--Price Input-->
+        <mat-form-field>
+          <input matInput
+                 placeholder="Price"
+                 [readonly]="true"
+                 formControlName="price">
+        </mat-form-field>
+      </section>
+    </form>
+  </section>
+
+  <section class="shopping-card--total">
+    <button mat-raised-button
+            color="primary"
+            [disabled]="form.invalid"
+            (click)="addProduct()">Add
+    </button>
+  </section>
+</mat-card>

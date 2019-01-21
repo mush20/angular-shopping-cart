@@ -1,0 +1,31 @@
+@import "variables";
+
+.shopping-cart {
+
+  .mat-card {
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  &--wrapper {
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 0 auto;
+  }
+
+  &--total {
+    place-content: center flex-end;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    margin-top: $default-margin-size;
+  }
+}

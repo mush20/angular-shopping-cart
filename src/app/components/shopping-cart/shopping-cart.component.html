@@ -1,3 +1,53 @@
-<p>
-  shopping-cart works!
-</p>
+<mat-card>
+  <h3>Shopping Cart</h3>
+  <section class="shopping-cart--wrapper">
+    <section fxFlex
+             class="shopping-cart--items">
+      <mat-table matSort
+                 [dataSource]="items"
+                 (matSortChange)="sortData($event)">
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef
+                           mat-sort-header>Name</mat-header-cell>
+          <mat-cell *matCellDef="let item" fxFlex> {{item.name}} </mat-cell>
+        </ng-container>
+
+        <!--Quantity Column-->
+        <ng-container matColumnDef="qty">
+          <mat-header-cell
+            *matHeaderCellDef mat-sort-header> Qty
+          </mat-header-cell>
+          <mat-cell mat-cell
+                    *matCellDef="let item" fxFlex> {{item.qty}} </mat-cell>
+        </ng-container>
+
+        <!--Price Column-->
+        <ng-container matColumnDef="price">
+          <mat-header-cell
+            *matHeaderCellDef>Price
+          </mat-header-cell>
+          <mat-cell mat-cell *matCellDef="let item" fxFlex> {{item.price}} </mat-cell>
+        </ng-container>
+
+        <!--Remove Column-->
+        <ng-container matColumnDef="remove">
+          <mat-header-cell
+            *matHeaderCellDef fxFlex="40px"></mat-header-cell>
+          <mat-cell mat-cell
+                    *matCellDef="let item"
+                    fxFlex="40px">
+            <mat-icon (click)="removeProduct(item.name)">close</mat-icon>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="visibleColumns; sticky: true"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: visibleColumns;"></mat-row>
+      </mat-table>
+    </section>
+  </section>
+
+  <section class="shopping-cart--total">
+    Total: ${{total}}
+  </section>
+</mat-card>
